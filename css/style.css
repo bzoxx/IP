@@ -132,7 +132,7 @@ header nav a:hover {
     text-align: center;
 }
 .card:hover {
-    
+    background-color: var(--secondary-color);
     color: var(--white);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-10px) scale(1.05);
