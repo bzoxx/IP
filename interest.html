@@ -27,83 +27,38 @@
         <h1>Tell Us About Yourself</h1>
         <p class="description">Answer the following questions to help us match you with compatible individuals. Use the sliders to indicate your preferences.</p>
 
-        <form>
-            <fieldset>
-                <legend>Personal Preferences</legend>
+<form>
+    <fieldset>
+        <legend>Personal Preferences</legend>
 
-                <div class="question-group">
-                    <label for="music">How much do you enjoy music? (0 = Not at all, 10 = Love it)</label>
-                    <input type="range" id="music" name="music" min="0" max="10">
-                </div>
+        <div class="question-group">
+            <label>What type of music do you enjoy? (Select all that apply)</label>
+            <div class="emoji-selection">
+                <button type="button" class="emoji-option">🎸 Pop</button>
+                <button type="button" class="emoji-option">🎷 Jazz</button>
+                <button type="button" class="emoji-option">🎤 Rap</button>
+                <button type="button" class="emoji-option">🎻 Classical</button>
+                <button type="button" class="emoji-option">🎶 Other</button>
+            </div>
+        </div>
 
-                <div class="question-group">
-                    <label for="movies">How often do you watch movies? (0 = Never, 10 = All the time)</label>
-                    <input type="range" id="movies" name="movies" min="0" max="10">
-                </div>
+        <div class="question-group">
+            <label>What type of movies do you prefer? (Select all that apply)</label>
+            <div class="emoji-selection">
+                <button type="button" class="emoji-option">🎥 Action</button>
+                <button type="button" class="emoji-option">😂 Comedy</button>
+                <button type="button" class="emoji-option">😭 Drama</button>
+                <button type="button" class="emoji-option">👻 Horror</button>
+                <button type="button" class="emoji-option">🌌 Sci-fi</button>
+            </div>
+        </div>
 
-                <div class="question-group">
-                    <label for="sports">How important are sports to you? (0 = Not important, 10 = Very important)</label>
-                    <input type="range" id="sports" name="sports" min="0" max="10">
-                </div>
+        <!-- Add more questions here -->
+    </fieldset>
 
-                <div class="question-group">
-                    <label for="travel">How often do you travel? (0 = Rarely, 10 = Frequently)</label>
-                    <input type="range" id="travel" name="travel" min="0" max="10">
-                </div>
+    <button onclick="location.href='dashboard.html'">Submit Survey</button>
+</form>
 
-                <div class="question-group">
-                    <label for="cooking">How much do you enjoy cooking? (0 = Not at all, 10 = Love it)</label>
-                    <input type="range" id="cooking" name="cooking" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="books">How often do you read books? (0 = Rarely, 10 = Always)</label>
-                    <input type="range" id="books" name="books" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="art">How interested are you in art? (0 = Not interested, 10 = Very interested)</label>
-                    <input type="range" id="art" name="art" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="technology">How passionate are you about technology? (0 = Not at all, 10 = Very passionate)</label>
-                    <input type="range" id="technology" name="technology" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="fitness">How important is fitness in your life? (0 = Not important, 10 = Very important)</label>
-                    <input type="range" id="fitness" name="fitness" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="socializing">How often do you socialize with friends? (0 = Rarely, 10 = Frequently)</label>
-                    <input type="range" id="socializing" name="socializing" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="nature">How much do you enjoy spending time in nature? (0 = Not at all, 10 = Love it)</label>
-                    <input type="range" id="nature" name="nature" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="gaming">How often do you play video games? (0 = Never, 10 = Frequently)</label>
-                    <input type="range" id="gaming" name="gaming" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="volunteering">How much do you enjoy volunteering? (0 = Not at all, 10 = Love it)</label>
-                    <input type="range" id="volunteering" name="volunteering" min="0" max="10">
-                </div>
-
-                <div class="question-group">
-                    <label for="pets">How much do you enjoy spending time with pets? (0 = Not at all, 10 = Love it)</label>
-                    <input type="range" id="pets" name="pets" min="0" max="10">
-                </div>
-            </fieldset>
-
-            <button  onclick="location.href='dashboard.html'" >Submit Survey</button>
-        </form>
 
         <h2>Why This Survey Matters</h2>
         <p class="info">By answering these questions, we can better understand your personality and preferences, making it easier to find someone who aligns with your values and interests.</p>
