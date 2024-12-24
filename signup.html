@@ -36,10 +36,14 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Create a password" required>
 
-            <label for="preferences">Your Preferences:</label>
+            <label for="preferences">Few things about yourself:</label>
             <textarea id="preferences" name="preferences" rows="4" placeholder="Tell us what you're looking for"></textarea>
 
-            <button  onclick="location.href='login.html'" >Sign Up</button>
+            <label for="birthdate">Birth Month and Date:</label>
+            <input type="text" id="birthdate" name="birthdate" placeholder="e.g., July 15" pattern="^[a-zA-Z]+ \d{1,2}$" required>
+            <small>Format: Month Day (e.g., July 15)</small>
+
+            <button onclick="location.href='login.html'">Sign Up</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a>.</p>
     </main>
