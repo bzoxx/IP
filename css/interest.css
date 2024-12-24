@@ -57,6 +57,35 @@ header nav ul li a {
 header nav ul li a:hover {
     color: var(--secondary-color);
 }
+/* Emoji Selection */
+.emoji-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.emoji-option {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.emoji-option:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+}
+
+.emoji-option.active {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+}
 
 /* Main Content */
 main {
