@@ -202,3 +202,72 @@ footer a {
     color: white;
     text-decoration: underline;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust Header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        padding: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust Main Grid Layout */
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .filter, .matches, .notifications {
+        max-width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .filter h2, .matches h2, .notifications h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for smaller phones */
+    body {
+        padding: 0 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    header nav ul li a {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    .filter h2, .matches h2, .notifications h2 {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    .match-list li, .pending-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .match-list button, .pending-list button {
+        margin: 10px 0 0;
+    }
+}
+
