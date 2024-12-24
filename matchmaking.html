@@ -15,34 +15,65 @@
         </div>
         <nav>
             <ul>
-            <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+                <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
                 <li><a href="profile.html" aria-label="View your Profile">Profile</a></li>
-           <li><a href="settings.html" aria-label="Go to Settings">Settings</a></li>
-        </ul>
+                <li><a href="settings.html" aria-label="Go to Settings">Settings</a></li>
+            </ul>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <h1>Find Your Match</h1>
-        <form>
-            <label for="ageRange">Preferred Age Range:</label>
-            <input type="text" id="ageRange" name="ageRange" placeholder="e.g., 25-35">
-            
-            <label for="location">Preferred Location:</label>
-            <input type="text" id="location" name="location" placeholder="City, Country">
-            
-            <label for="interests">Interests:</label>
-            <input type="text" id="interests" name="interests" placeholder="e.g., Music, Travel, Sports">
-            
-            <button type="submit">Find Matches</button>
-        </form>
+        <section class="content">
+            <!-- Filter Section -->
+            <aside class="filter">
+                <h2>Filter Matches</h2>
+                <form>
+                    <label for="ageRange">Preferred Age Range:</label>
+                    <input type="text" id="ageRange" name="ageRange" placeholder="e.g., 25-35">
+                    
+                    <label for="location">Preferred Location:</label>
+                    <input type="text" id="location" name="location" placeholder="City, Country">
+                    
+                    <label for="interests">Interests:</label>
+                    <input type="text" id="interests" name="interests" placeholder="e.g., Music, Travel, Sports">
+                    
+                    <button type="submit">Apply Filters</button>
+                </form>
+            </aside>
 
-        <h2>Your Potential Matches</h2>
-        <ul class="ul">
-            <li>Match 1 <button onclick="location.href='chat.html'">Chat</button></li>
-            <li>Match 2 <button onclick="location.href='chat.html'">Chat</button></li>
-        </ul>
+            <!-- Potential Matches -->
+            <section class="matches">
+                <h2>Your Potential Matches</h2>
+                <ul class="match-list">
+                    <li>
+                        <span>Match 1</span>
+                        <button onclick="location.href='chat.html'">Chat</button>
+                    </li>
+                    <li>
+                        <span>Match 2</span>
+                        <button onclick="location.href='chat.html'">Chat</button>
+                    </li>
+                    <li>
+                        <span>Match 3</span>
+                        <button onclick="location.href='chat.html'">Chat</button>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Notifications Sidebar -->
+        <aside class="notifications">
+            <h2>Pending Matches</h2>
+            <ul class="pending-list">
+                <li>
+                    Match Request from Jane <button>Accept</button> <button>Decline</button>
+                </li>
+                <li>
+                    Match Request from John <button>Accept</button> <button>Decline</button>
+                </li>
+            </ul>
+        </aside>
     </main>
 
     <!-- Footer -->
