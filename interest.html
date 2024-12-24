@@ -28,7 +28,7 @@
         <p class="description">Answer the following questions to help us match you with compatible individuals. Use the sliders to indicate your preferences.</p>
 
         <!-- Survey Form -->
-<!--         <form> -->
+        <form>
             <fieldset>
                 <legend>Personal Preferences</legend>
 
@@ -116,7 +116,7 @@
                 <!-- Submit Button -->
                 <button onclick="location.href='dashboard.html'">Submit Survey</button>
             </fieldset>
-<!--         </form> -->
+        </form>
 
         <!-- Info Section -->
         <h2>Why This Survey Matters</h2>
@@ -137,6 +137,12 @@
                 button.classList.toggle('active');
             });
         });
+
+document.getElementById('preferences-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        // Perform any data validation or processing here if needed
+        window.location.href = 'dashboard.html'; // Navigate to the desired page
+    });
     </script>
 
 </body>
