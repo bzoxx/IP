@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interest Survey - Blind Date Hub</title>
     <link rel="stylesheet" href="css/interest.css">
-<script>
-    document.querySelectorAll('.emoji-option').forEach(button => {
-    button.addEventListener('click', () => {
-        button.classList.toggle('active');
-    });
-});
 
-</script>
 </head>
 <body>
 
@@ -60,8 +53,15 @@
                 <button type="button" class="emoji-option">🌌 Sci-fi</button>
             </div>
         </div>
+<script>
+    document.querySelectorAll('.emoji-option').forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('active');
+    });
+});
 
-        <!-- Add more questions here -->
+</script>
+      
     </fieldset>
 
     <button onclick="location.href='dashboard.html'">Submit Survey</button>
