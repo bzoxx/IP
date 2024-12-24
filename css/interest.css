@@ -181,7 +181,7 @@ input[type="range"]:active::-webkit-slider-thumb {
     box-shadow: 0 4px 8px var(--shadow-color);
 }
 
-form button {
+form p {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 8px;
@@ -193,7 +193,7 @@ form button {
     width: 100%;
 }
 
-form button:hover {
+form p:hover {
     background: var(--secondary-color);
 }
 
