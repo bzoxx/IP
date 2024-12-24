@@ -6,7 +6,82 @@
     --text-color: #333;
     --white: #ffffff;
 }
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* General Layout */
+    body {
+        font-size: 14px;
+    }
 
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .features {
+        padding: 20px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .testimonials {
+        padding: 20px;
+    }
+
+    .testimonials h2 {
+        font-size: 28px;
+    }
+
+    .testimonial p {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px; 
+    }
+}
 /* Global Styles */
 body {
     margin: 0;
@@ -196,80 +271,5 @@ footer a:hover {
     color: var(--secondary-color);
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    /* General Layout */
-    body {
-        font-size: 14px;
-    }
 
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .hero-image img {
-        max-width: 80%;
-        margin-top: 20px;
-    }
-
-    .cta-button {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    .features {
-        padding: 20px;
-    }
-
-    .feature-cards {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .card {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .testimonials {
-        padding: 20px;
-    }
-
-    .testimonials h2 {
-        font-size: 28px;
-    }
-
-    .testimonial p {
-        font-size: 16px;
-    }
-
-    footer {
-        font-size: 14px;
-        padding: 15px; 
-    }
-}
 
