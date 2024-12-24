@@ -48,6 +48,11 @@ nav ul li a:hover {
     color: var(--secondary-color);
 }
 
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
 main {
     padding: 2rem;
     max-width: 1200px;
