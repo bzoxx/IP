@@ -44,11 +44,69 @@
             <label for="birthdate">Birth Date:</label>
             <input type="Date" id="birthdate" name="birthdate" placeholder="e.g., July 15" pattern="^[a-zA-Z]+ \d{1,2}$" required>
 
-            <button onclick="location.href='login.html'">Sign Up</button>
+            <button type="submit" >Sign Up</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a>.</p>
     </main>
+<script>
+        const form = document.getElementById('signup-form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const preferences = document.getElementById('preferences');
+        const birthdate = document.getElementById('birthdate');
 
+        const usernameError = document.getElementById('username-error');
+        const emailError = document.getElementById('email-error');
+        const passwordError = document.getElementById('password-error');
+        const preferencesError = document.getElementById('preferences-error');
+        const birthdateError = document.getElementById('birthdate-error');
+
+        form.addEventListener('submit', (event) => {
+            let isValid = true;
+
+            // Validate username
+            if (username.value.trim().length < 3) {
+                usernameError.classList.add('active');
+                isValid = false;
+            } else {
+                usernameError.classList.remove('active');
+            }
+
+            // Validate email
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email.value.trim())) {
+                emailError.classList.add('active');
+                isValid = false;
+            } else {
+                emailError.classList.remove('active');
+            }
+
+            // Validate password
+            if (password.value.trim().length < 6) {
+                passwordError.classList.add('active');
+                isValid = false;
+            } else {
+                passwordError.classList.remove('active');
+            }
+
+            // Validate birthdate
+            if (!birthdate.value) {
+                birthdateError.classList.add('active');
+                isValid = false;
+            } else {
+                birthdateError.classList.remove('active');
+            }
+
+            // Prevent form submission if not valid
+            if (!isValid) {
+                event.preventDefault();
+            } else {
+        // If valid, redirect to login.html
+        window.location.href = 'login.html';
+    }
+        });
+    </script>
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Blind Cupid. All rights reserved.</p>
