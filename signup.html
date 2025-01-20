@@ -28,23 +28,28 @@
     <!-- Main Content -->
     <main>
         <h1>Sign Up</h1>
-        <form action="#">
+        <form id="signup-form">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Choose a username" >
+            <input type="text" id="username" name="username" placeholder="Choose a username" required>
+            <div id="username-error" class="error-popup">Username is required and must be at least 3 characters long.</div>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <div id="email-error" class="error-popup">Please enter a valid email address.</div>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" placeholder="Create a password" required>
+            <div id="password-error" class="error-popup">Password must be at least 6 characters long.</div>
 
             <label for="preferences">Few things about yourself:</label>
             <textarea id="preferences" name="preferences" rows="4" placeholder="Tell us what you're looking for"></textarea>
+            <div id="preferences-error" class="error-popup">Please share something about yourself (optional but recommended).</div>
 
             <label for="birthdate">Birth Date:</label>
-            <input type="Date" id="birthdate" name="birthdate" placeholder="e.g., July 15" pattern="^[a-zA-Z]+ \d{1,2}$" required>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <div id="birthdate-error" class="error-popup">Please select a valid birthdate.</div>
 
-            <button type="submit" >Sign Up</button>
+            <button type="submit">Sign Up</button>
         </form>
         <p>Already have an account? <a href="login.html">Login here</a>.</p>
     </main>
@@ -62,49 +67,50 @@
         const preferencesError = document.getElementById('preferences-error');
         const birthdateError = document.getElementById('birthdate-error');
 
-        form.addEventListener('submit', (event) => {
-            let isValid = true;
+    form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
 
-            // Validate username
-            if (username.value.trim().length < 3) {
-                usernameError.classList.add('active');
-                isValid = false;
-            } else {
-                usernameError.classList.remove('active');
-            }
+    let isValid = true;
 
-            // Validate email
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailPattern.test(email.value.trim())) {
-                emailError.classList.add('active');
-                isValid = false;
-            } else {
-                emailError.classList.remove('active');
-            }
-
-            // Validate password
-            if (password.value.trim().length < 6) {
-                passwordError.classList.add('active');
-                isValid = false;
-            } else {
-                passwordError.classList.remove('active');
-            }
-
-            // Validate birthdate
-            if (!birthdate.value) {
-                birthdateError.classList.add('active');
-                isValid = false;
-            } else {
-                birthdateError.classList.remove('active');
-            }
-
-            // Prevent form submission if not valid
-            if (!isValid) {
-                event.preventDefault();
-            } else {
-        // If valid, redirect to login.html
-        window.location.href = 'login.html';
+    // Validate username
+    if (username.value.trim().length < 3) {
+        usernameError.classList.add('active');
+        isValid = false;
+    } else {
+        usernameError.classList.remove('active');
     }
+
+    // Validate email
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email.value.trim())) {
+        emailError.classList.add('active');
+        isValid = false;
+    } else {
+        emailError.classList.remove('active');
+    }
+
+    // Validate password
+    if (password.value.trim().length < 6) {
+        passwordError.classList.add('active');
+        isValid = false;
+    } else {
+        passwordError.classList.remove('active');
+    }
+
+    // Validate birthdate
+    if (!birthdate.value) {
+        birthdateError.classList.add('active');
+        isValid = false;
+    } else {
+        birthdateError.classList.remove('active');
+    }
+
+    // Proceed if valid
+    if (isValid) {
+        window.location.href = 'login.html'; // Redirect to login.html
+    }
+});
+
         });
     </script>
     <!-- Footer -->
