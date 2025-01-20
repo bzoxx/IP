@@ -177,3 +177,14 @@ footer a {
 footer a:hover {
     color: var(--secondary-color);
 }
+.error-popup {
+    font-size: 12px; /* Small font size */
+    color: #d9534f; /* Muted red color */
+    margin-top: 5px; /* Add space between the input and the error */
+    display: none; /* Hidden by default */
+}
+
+.error-popup.active {
+    display: block; /* Show when active */
+}
+
