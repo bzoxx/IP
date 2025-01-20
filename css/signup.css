@@ -34,13 +34,14 @@ header {
 header nav ul {
     display: flex;
     gap: 15px;
-    text-decoration: none;
+
         color: var(--white);
         list-style: none;
 }
 
 header nav a {
-    color: var(--white);
+    color: white;
+        text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
