@@ -1,8 +1,8 @@
 /* External CSS: style.css */
 
 :root {
-    --primary-color: #a25ddc; /* Purple */
-    --secondary-color: #ff6ec7; /* Pink */
+     --primary-color: #a25ddc; /* Deep purple */
+       --secondary-color: #ff6ec7;/* Hot pink */
     --background-color: #f9f4fc; /* Light lavender */
     --text-color: #333;
     --button-text-color: white;
