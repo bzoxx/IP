@@ -104,16 +104,60 @@ form button {
 form button:hover {
     background: var(--button-hover-color);
 }
- .error-popup {
+.popup {
             display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: #f8d7da;
             color: #721c24;
             border: 1px solid #f5c6cb;
             border-radius: 5px;
-            padding: 10px;
-            margin-top: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
         }
-        .error-popup.active {
+
+        .popup.active {
+            display: block;
+        }
+
+        .popup h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .popup p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .popup button {
+            background-color: #721c24;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #a32f37;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
             display: block;
         }
 footer {
