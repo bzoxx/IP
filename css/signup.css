@@ -181,7 +181,7 @@ footer a:hover {
     font-size: 12px; /* Small font size */
     color: #d9534f; /* Muted red color */
     margin-top: 5px; /* Add space between the input and the error */
-    display: none; /* Hidden by default */
+    
 }
 
 .error-popup.active {
