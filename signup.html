@@ -61,33 +61,31 @@
     </div>
 
 <script>
-       const form = document.getElementById('signup-form');
+      const form = document.getElementById('signup-form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
-const preferences = document.getElementById('preferences');
 const birthdate = document.getElementById('birthdate');
 
 const usernameError = document.getElementById('username-error');
 const emailError = document.getElementById('email-error');
 const passwordError = document.getElementById('password-error');
-const preferencesError = document.getElementById('preferences-error');
 const birthdateError = document.getElementById('birthdate-error');
 
 const popup = document.getElementById('popup');
-const overlay = document.getElementById('overlay');
 const popupMessage = document.getElementById('popup-message');
 const closePopup = document.getElementById('close-popup');
+const overlay = document.getElementById('overlay');
 
-// Show popup
 function showPopup(message) {
+    console.log("Showing popup with message:", message); // Debugging
     popupMessage.textContent = message;
     popup.classList.add('active');
     overlay.classList.add('active');
 }
 
-// Hide popup
 closePopup.addEventListener('click', () => {
+    console.log("Closing popup"); // Debugging
     popup.classList.remove('active');
     overlay.classList.remove('active');
 });
@@ -130,11 +128,12 @@ form.addEventListener('submit', (event) => {
         birthdateError.classList.remove('active');
     }
 
-    // Show popup or redirect
+    // Show popup if not valid
     if (!isValid) {
-        showPopup('Please fill in all required fields correctly.');
+        showPopup("Please fill in all required fields correctly.");
     } else {
         // If valid, redirect to login.html
+        console.log("Form is valid, redirecting to login.html"); // Debugging
         window.location.href = 'login.html';
     }
 });
