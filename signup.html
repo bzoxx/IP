@@ -53,21 +53,46 @@
         </form>
         <p>Already have an account? <a href="login.html">Login here</a>.</p>
     </main>
+<div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Error</h2>
+        <p id="popup-message">Please fill in all required fields correctly.</p>
+        <button id="close-popup">Close</button>
+    </div>
+
 <script>
-        const form = document.getElementById('signup-form');
-        const username = document.getElementById('username');
-        const email = document.getElementById('email');
-        const password = document.getElementById('password');
-        const preferences = document.getElementById('preferences');
-        const birthdate = document.getElementById('birthdate');
+       const form = document.getElementById('signup-form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
+const preferences = document.getElementById('preferences');
+const birthdate = document.getElementById('birthdate');
 
-        const usernameError = document.getElementById('username-error');
-        const emailError = document.getElementById('email-error');
-        const passwordError = document.getElementById('password-error');
-        const preferencesError = document.getElementById('preferences-error');
-        const birthdateError = document.getElementById('birthdate-error');
+const usernameError = document.getElementById('username-error');
+const emailError = document.getElementById('email-error');
+const passwordError = document.getElementById('password-error');
+const preferencesError = document.getElementById('preferences-error');
+const birthdateError = document.getElementById('birthdate-error');
 
-    form.addEventListener('submit', (event) => {
+const popup = document.getElementById('popup');
+const overlay = document.getElementById('overlay');
+const popupMessage = document.getElementById('popup-message');
+const closePopup = document.getElementById('close-popup');
+
+// Show popup
+function showPopup(message) {
+    popupMessage.textContent = message;
+    popup.classList.add('active');
+    overlay.classList.add('active');
+}
+
+// Hide popup
+closePopup.addEventListener('click', () => {
+    popup.classList.remove('active');
+    overlay.classList.remove('active');
+});
+
+form.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent default form submission
 
     let isValid = true;
@@ -105,13 +130,15 @@
         birthdateError.classList.remove('active');
     }
 
-    // Proceed if valid
-    if (isValid) {
-        window.location.href = 'login.html'; // Redirect to login.html
+    // Show popup or redirect
+    if (!isValid) {
+        showPopup('Please fill in all required fields correctly.');
+    } else {
+        // If valid, redirect to login.html
+        window.location.href = 'login.html';
     }
 });
 
-        });
     </script>
     <!-- Footer -->
     <footer>
