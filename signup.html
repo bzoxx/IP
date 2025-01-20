@@ -43,9 +43,11 @@
 
             <label for="preferences">Few things about yourself:</label>
             <textarea id="preferences" name="preferences" rows="4" placeholder="Tell us what you're looking for"></textarea>
+           <div id="preferences-error" class="error-popup">Password must be at least 6 characters long.</div>
 
             <label for="birthdate">Birth Date:</label>
             <input type="date" id="birthdate" name="birthdate" required>
+<div id="birthdate-error" class="error-popup">Birth date is required.</div>
 
             <button type="submit">Sign Up</button>
         </form>
