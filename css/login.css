@@ -28,7 +28,7 @@ header {
     align-items: center;
     padding: 20px;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: #FFFFFF;
 }
 
 
@@ -36,10 +36,14 @@ header {
 header nav ul {
     display: flex;
     gap: 15px;
+
+        color: var(--white);
+        list-style: none;
 }
 
 header nav a {
-    color: var(--white);
+    color: #FFFFFF;
+        text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -47,7 +51,6 @@ header nav a {
 header nav a:hover {
     color: var(--secondary-color);
 }
-
 
 main {
     padding: 2rem;
